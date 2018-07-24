@@ -1,7 +1,7 @@
 # Author::    Sergio Fierens
 # License::   MPL 1.1
 # Project::   ai4r
-# Url::       http://www.ai4r.org/
+# Url::       https://github.com/SergioFierens/ai4r
 #
 # You can redistribute it and/or modify it under the terms of 
 # the Mozilla Public License version 1.1  as published by the 
@@ -97,6 +97,12 @@ module Ai4r
         assert_equal [[ "New York", 25, "Y"]], set[0].data_items
         assert_equal [[ "Chicago", 23, "Y"],[ "Boston", 23, "N"]], set[2..3].data_items
         assert_equal items[1..-1], set[1..-1].data_items
+      end
+
+      def test_category_label
+        labels = ["Feature_1", "Feature_2", "Category Label"]
+        set = DataSet.new(:data_labels => labels)
+        assert_equal "Category Label", set.category_label
       end
      
     end

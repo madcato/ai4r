@@ -1,7 +1,7 @@
 # Author::    Sergio Fierens
 # License::   MPL 1.1
 # Project::   ai4r
-# Url::       http://ai4r.org/
+# Url::       https://github.com/SergioFierens/ai4r
 #
 # You can redistribute it and/or modify it under the terms of 
 # the Mozilla Public License version 1.1  as published by the 
@@ -225,6 +225,11 @@ module Ai4r
                   end
         end
         return mean
+      end
+
+      # Returns label of category
+      def category_label
+        data_labels.last
       end
 
       protected

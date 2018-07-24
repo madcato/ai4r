@@ -2,7 +2,7 @@
 # the creator of the algorithm)
 # License::   MPL 1.1
 # Project::   ai4r
-# Url::       http://www.ai4r.org/
+# Url::       https://github.com/SergioFierens/ai4r
 #
 # You can redistribute it and/or modify it under the terms of 
 # the Mozilla Public License version 1.1  as published by the 
@@ -188,7 +188,7 @@ module Ai4r
       end
       
       def then_clause(rule)
-        "#{@data_set.data_labels.last} = '#{rule[:class_value]}'"
+        "#{@data_set.category_label} = '#{rule[:class_value]}'"
       end
           
     end

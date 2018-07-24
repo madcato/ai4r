@@ -1,7 +1,7 @@
 # Author::    Sergio Fierens (Implementation only)
 # License::   MPL 1.1
 # Project::   ai4r
-# Url::       http://ai4r.org/
+# Url::       https://github.com/SergioFierens/ai4r
 #
 # You can redistribute it and/or modify it under the terms of 
 # the Mozilla Public License version 1.1  as published by the 
@@ -64,7 +64,7 @@ module Ai4r
       #     puts marketing_target
       #       # =>  'Y'
       def get_rules
-        return "#{@data_set.data_labels.last} = '#{@class_value}'"
+        return "#{@data_set.category_label} = '#{@class_value}'"
       end
 
     end

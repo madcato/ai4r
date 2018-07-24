@@ -1,7 +1,7 @@
 # Author::    Sergio Fierens (Implementation only)
 # License::   MPL 1.1
 # Project::   ai4r
-# Url::       http://www.ai4r.org/
+# Url::       https://github.com/SergioFierens/ai4r
 #
 # You can redistribute it and/or modify it under the terms of 
 # the Mozilla Public License version 1.1  as published by the 
@@ -72,7 +72,7 @@ module Ai4r
         return @zero_r.get_rules if @zero_r
         sentences = []
         attr_label = @data_set.data_labels[@rule[:attr_index]]
-        class_label = @data_set.data_labels.last
+        class_label = @data_set.category_label
         @rule[:rule].each_pair do |attr_value, class_value|
           sentences << "#{attr_label} == '#{attr_value}' then #{class_label} = '#{class_value}'"
         end
